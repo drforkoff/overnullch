@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Status>
+    <Status>Idea</Status>
+    <Name>Идея</Name>
+  </Status>
+  <Status>
+    <Status>Open</Status>
+    <Name>Открыто</Name>
+  </Status>
+  <Status>
+    <Status>Started</Status>
+    <Name>В работе</Name>
+  </Status>
+  <Status>
+    <Status>Paused</Status>
+    <Name>На паузе</Name>
+  </Status>
+  <Status>
+    <Status>Done</Status>
+    <Name>Выполнено</Name>
+  </Status>
+  <Status>
+    <Status>Closed</Status>
+    <Name>Закрыто</Name>
+  </Status>
+</TaskData>
