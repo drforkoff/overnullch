@@ -1,4 +1,4 @@
-# Overnullch
+# <img src="https://raw.githubusercontent.com/Juribiyan/overnullch/master/fav/favicon-32x32.png"> Overnullch
 
 ## Развертывание
 *В настоящее время Овернульч не поставляется с удобным инсталлером или сборщиком, но это может быть справлено в дальнейшем.*
