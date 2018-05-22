@@ -35,6 +35,6 @@ if (!isset($tc_db) && !isset($preconfig_db_unnecessary)) {
 	} else {
 		$tc_db->Connect(KU_DBHOST, KU_DBUSERNAME, KU_DBPASSWORD, KU_DBDATABASE) or die('SQL database connection error: ' . $tc_db->ErrorMsg());
 	}
+  $tc_db->EXECUTE("SET NAMES 'utf8mb4'");
 }
-
 ?>
