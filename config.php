@@ -16,7 +16,6 @@ $cf['KU_DBHOST']          = 'localhost'; // Database hostname. On SQLite this ha
 $cf['KU_DBDATABASE']      = 'overnullch'; // Database... database. On SQLite this will be the path to your database file. Secure this file.
 $cf['KU_DBUSERNAME']      = 'root'; // Database username. On SQLite this has no effect.
 $cf['KU_DBPASSWORD']      = ''; // Database password. On SQLite this has no effect.
-$cf['KU_DBPREFIX']        = ''; // Database table prefix
 $cf['KU_DBUSEPERSISTENT'] = false; // Use persistent connection to database
 
 foreach ($cf as $key => $value) {
