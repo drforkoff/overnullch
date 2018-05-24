@@ -203,31 +203,28 @@ var chans = {
         "boards": [
           {
             "desc": "Метадоска",
-            "url": "https://0chan.one/meta",
-            "external": true
+            "dir": "meta"
           },
           {
             "desc": "Каталог сайтов",
-            "url": "https://0chan.one/catalog",
-            "external": true
+            "dir": "catalog"
           },
           {
             "desc": "Редактор сайтов",
-            "url": "https://0chan.one/editor",
-            "external": true
+            "dir": "editor"
           },
           {
             "desc": "Ballsmash",
-            "url": "https://0chan.one/mash",
-            "external": true
+            "dir": "mash"
           }/*,
           {
             "desc": "Библиотека лупов",
-            "dir": "https://0chan.one/loops"
+            "dir": "loops"
           }*/
         ]
       }
     ],
+    // colors:["aaaaaa","bbbbbb"],
     name: "Овернульч",
     url: 'http://0chan.one'
   },
@@ -240,7 +237,7 @@ var chans = {
       injector.inject('framestyles', cssCache)
     }
     else {
-      lessCompiler.compile(this.model)
+      lessCompiler.compile(this.model.concat(this.own))
     }
   },
   rebuildChan: function(chan) {
@@ -501,7 +498,7 @@ var chans = {
       }
       if (changed.length) {
         // Restyle chans if needed
-        lessCompiler.compile(this.model)
+        lessCompiler.compile(this.model.concat(this.own))
         changed.forEach(chg => {
           console.info(`Updated ${chg.origin}-originated chans' cache to v.=${chg.version}`)
         })
@@ -579,7 +576,6 @@ var lessCompiler = {
     chans.forEach(ch => {
       if (ch.colors) {
         let idClassEscaped = ('chan_'+ch.id).replace('!', '\\!')
-        // res += `.colorize .${idClassEscaped}, .colorize-on-hover:hover .${idClassEscaped} {
         res += `.${idClassEscaped} { 
           @bgcolor: #${ch.colors[0]};  @linkcolor: #${ch.colors[1]}; `
           + (ch.advanced_less || this.base) + '}\n\n'
